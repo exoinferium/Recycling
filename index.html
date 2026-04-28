@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecycleHub - Learn About Recycling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">♻️ RecycleHub</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#why">Why Recycle</a></li>
+                <li><a href="#how">How to Recycle</a></li>
+                <li><a href="#guide">Recycling Guide</a></li>
+                <li><a href="#impact">Impact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Make a Difference with Recycling</h1>
+            <p>Learn how your everyday choices can protect our planet</p>
+            <button class="cta-button" onclick="document.getElementById('why').scrollIntoView({behavior: 'smooth'})">Start Learning</button>
+        </div>
+        <div class="hero-background">
+            <div class="leaf leaf1">🌿</div>
+            <div class="leaf leaf2">🌍</div>
+            <div class="leaf leaf3">♻️</div>
+        </div>
+    </section>
+
+    <!-- Why Recycle Section -->
+    <section id="why" class="why-section">
+        <h2>Why Should We Recycle?</h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h3>Protect Our Planet</h3>
+                <p>Recycling reduces the need for new raw materials, preserving natural resources and reducing environmental damage from mining and logging.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Save Energy</h3>
+                <p>Manufacturing products from recycled materials uses significantly less energy than creating them from scratch, reducing carbon emissions.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💰</div>
+                <h3>Economic Benefits</h3>
+                <p>Recycling creates jobs in collection, processing, and manufacturing, while reducing landfill costs for communities.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏭</div>
+                <h3>Reduce Pollution</h3>
+                <p>Less landfill waste means reduced soil and water contamination, creating healthier environments for all living things.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Recycle Section -->
+    <section id="how" class="how-section">
+        <h2>How to Recycle Properly</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Clean & Dry</h3>
+                <p>Rinse containers and let them dry to prevent contamination</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Sort Materials</h3>
+                <p>Separate plastics, metals, glass, and paper according to your local guidelines</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Remove Lids</h3>
+                <p>Take off caps and lids from bottles and jars before recycling</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Flatten Boxes</h3>
+                <p>Flatten cardboard boxes to save space in recycling bins</p>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Check Local Rules</h3>
+                <p>Different communities have different recycling guidelines—know yours!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Recycling Guide -->
+    <section id="guide" class="guide-section">
+        <h2>Recycling Guide</h2>
+        <p class="guide-intro">Click on an item to learn if it can be recycled</p>
+        
+        <div class="recycling-items">
+            <div class="recyclable-item recyclable" onclick="toggleInfo(this)">
+                <div class="item-emoji">📦</div>
+                <div class="item-name">Cardboard</div>
+                <div class="item-info">✅ RECYCLABLE - Flatten and break down before recycling</div>
+            </div>
+            <div class="recyclable-item recyclable" onclick="toggleInfo(this)">
+                <div class="item-emoji">🍾</div>
+                <div class="item-name">Glass Bottles</div>
+                <div class="item-info">✅ RECYCLABLE - Rinse thoroughly, keep separate from trash</div>
+            </div>
+            <div class="recyclable-item recyclable" onclick="toggleInfo(this)">
+                <div class="item-emoji">🥫</div>
+                <div class="item-name">Aluminum Cans</div>
+                <div class="item-info">✅ RECYCLABLE - Highest value recyclable, always accepted</div>
+            </div>
+            <div class="recyclable-item recyclable" onclick="toggleInfo(this)">
+                <div class="item-emoji">📰</div>
+                <div class="item-name">Newspapers</div>
+                <div class="item-info">✅ RECYCLABLE - Keep dry and bundle together</div>
+            </div>
+            <div class="recyclable-item not-recyclable" onclick="toggleInfo(this)">
+                <div class="item-emoji">🥤</div>
+                <div class="item-name">Plastic Bags</div>
+                <div class="item-info">❌ NOT RECYCLABLE - Tangled in machinery, take to store instead</div>
+            </div>
+            <div class="recyclable-item not-recyclable" onclick="toggleInfo(this)">
+                <div class="item-emoji">🍕</div>
+                <div class="item-name">Pizza Boxes</div>
+                <div class="item-info">❌ NOT RECYCLABLE (if greasy) - Contaminated with food</div>
+            </div>
+            <div class="recyclable-item recyclable" onclick="toggleInfo(this)">
+                <div class="item-emoji">📄</div>
+                <div class="item-name">Paper</div>
+                <div class="item-info">✅ RECYCLABLE - Most paper products are recyclable</div>
+            </div>
+            <div class="recyclable-item not-recyclable" onclick="toggleInfo(this)">
+                <div class="item-emoji">🔋</div>
+                <div class="item-name">Batteries</div>
+                <div class="item-info">❌ NOT RECYCLABLE (in trash) - Take to special collection sites</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="impact-section">
+        <h2>Your Impact Matters</h2>
+        <div class="impact-stats">
+            <div class="stat">
+                <h3>1 Recycled Aluminum Can</h3>
+                <p>Saves enough energy to power a laptop for 3 hours</p>
+            </div>
+            <div class="stat">
+                <h3>1 Ton of Recycled Paper</h3>
+                <p>Saves 17 trees, 7,000 gallons of water, and 463 gallons of oil</p>
+            </div>
+            <div class="stat">
+                <h3>Recycling 1 Plastic Bottle</h3>
+                <p>Saves enough energy to power an LED light bulb for 3 hours</p>
+            </div>
+        </div>
+
+        <div class="commitment-box">
+            <h3>Make Your Commitment Today!</h3>
+            <p>I pledge to recycle and reduce waste in my daily life.</p>
+            <button class="pledge-button" onclick="showPledge()">I'm Ready to Recycle! ♻️</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 RecycleHub - Making the world greener, one item at a time</p>
+        <p>Remember: Reduce → Reuse → Recycle</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
